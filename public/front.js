@@ -47,7 +47,7 @@ const verify = async () => {
 //verify()
 
 const anonID = async () => {
-  const response = await fetch('/api/anon-id', {
+  const response = await fetch('/anon-id', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
