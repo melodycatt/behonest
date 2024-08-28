@@ -40,6 +40,7 @@ app.post('/send-verification-email', (req, res) => {
   console.log(codes)
   codes = JSON.parse(codes)
   console.log(codes)
+  console.log(codes[email])
   codes[email] = verificationCode
   console.log(codes)
   // Save the verification code and email in your database here
