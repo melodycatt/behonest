@@ -30,6 +30,7 @@ app.get('/anon-id', (req, res) => {
 })
 
 app.post('/send-verification-email', (req, res) => {
+  console.log("WHAT")
   const { email } = req.body;
   const verificationCode = generateVerificationCode();
 
