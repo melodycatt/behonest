@@ -34,7 +34,7 @@ app.post('/send-verification-email', (req, res) => {
   const { email } = req.body;
   const verificationCode = generateVerificationCode();
   console.log(email, verificationCode)
-  var codes = fs.readFileSync('./codes.json');
+  var codes = fs.readFileSync(path.join(__dirname, '..', 'codes.json'));
   console.log(codes)
   codes = codes.toString()
   console.log(codes)
@@ -42,7 +42,7 @@ app.post('/send-verification-email', (req, res) => {
   console.log(codes)
   codes[email] = verificationCode
   // Save the verification code and email in your database here
-  fs.writeFileSync('./codes.json', JSON.stringify(codes))
+  fs.writeFileSync(path.join(__dirname, '..', 'codes.json'), JSON.stringify(codes))
 
   sendVerificationEmail(email, verificationCode);
   res.status(200).send('Verification email sent');
