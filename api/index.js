@@ -22,14 +22,14 @@ console.log("fuckfuckfuckfu")
 console.log("fuckfuckfuckfu")
 
 
-app.get('/anon-id', async (req, res) => {
+app.get('/anon-id', (req, res) => {
   console.log("e")
-  var anon = JSON.parse(await fs.readFile('../userdata.json').toString())
+  var anon = JSON.parse(fs.readFileSync('../userdata.json').toString())
   console.log(anon.anonID)
   res.status(200).send(anon.anonID)
 })
 
-app.post('api/send-verification-email', (req, res) => {
+app.post('/send-verification-email', (req, res) => {
   const { email } = req.body;
   const verificationCode = generateVerificationCode();
 
