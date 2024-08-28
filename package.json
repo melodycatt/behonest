@@ -2,7 +2,7 @@
   "name": "behonest",
   "version": "1.0.0",
   "description": "be honest.",
-  "main": "api/email.js",
+  "main": "api/index.js",
   "scripts": {
     "test": "/"
   },
