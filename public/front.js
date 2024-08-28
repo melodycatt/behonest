@@ -3,7 +3,7 @@ const sendEmail = async () => {
     //const email = "edward.lenzner@gmail.com"
     console.log({ email: email })
 
-    const response = await fetch('/api/send-verification-email', {
+    const response = await fetch('/send-verification-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

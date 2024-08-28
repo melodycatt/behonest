@@ -29,7 +29,7 @@ app.get('/anon-id', (req, res) => {
   res.status(200).send(anon.anonID)
 })
 
-app.post('api/send-verification-email', (req, res) => {
+app.post('/send-verification-email', (req, res) => {
   console.log("WHAT")
   const { email } = req.body;
   const verificationCode = generateVerificationCode();
