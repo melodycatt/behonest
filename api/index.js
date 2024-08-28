@@ -23,6 +23,7 @@ console.log("fuckfuckfuckfu")
 
 
 app.get('/anon-id', (req, res) => {
+  console.log("e")
   var anon = JSON.parse(fs.readFileSync('../userdata.json').toString())
   console.log(anon.anonID)
   res.status(200).send(anon.anonID)
