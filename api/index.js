@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 app.get('/anon-id', (req, res) => {
   var anon = JSON.parse(fs.readFileSync('./userdata.json').toString())
   console.log(anon)
-  res.status(200).send(anon)
+  res.status(200).send("hi")
 })
 
 app.post('/send-verification-email', (req, res) => {
