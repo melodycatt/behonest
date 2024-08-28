@@ -10,6 +10,7 @@ app.use(cors())
 app.use(express.static(path.join(__dirname,'..', 'public')));
 
 app.get('/', (req, res) => {
+  console.log("hi")
   res.sendFile(path.join(__dirname, '..', 'public', 'verify.html'));
 });
 
