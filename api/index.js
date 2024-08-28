@@ -29,13 +29,16 @@ app.get('/anon-id', (req, res) => {
   res.status(200).send(anon.anonID)
 })
 
-app.post('/send-verification-email', (req, res) => {
+app.post('api/send-verification-email', (req, res) => {
   console.log("WHAT")
   const { email } = req.body;
   const verificationCode = generateVerificationCode();
   console.log(email, verificationCode)
-
-  var codes = JSON.parse(fs.readFileSync('./codes.json').toString())
+  var codes = fs.readFileSync('./codes.json');
+  console.log(codes)
+  codes = codes.toString()
+  console.log(codes)
+  codes = JSON.parse(codes)
   console.log(codes)
   codes[email] = verificationCode
   // Save the verification code and email in your database here
