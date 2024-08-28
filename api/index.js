@@ -14,6 +14,14 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'verify.html'));
 });
 
+console.log("fuckfuckfuckfu")
+console.log("fuckfuckfuckfu")
+console.log("fuckfuckfuckfu")
+console.log("fuckfuckfuckfu")
+console.log("fuckfuckfuckfu")
+console.log("fuckfuckfuckfu")
+
+
 app.get('/anon-id', (req, res) => {
   var anon = JSON.parse(fs.readFileSync('./userdata.json').toString())
   console.log(anon)
