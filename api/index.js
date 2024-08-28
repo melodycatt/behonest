@@ -23,9 +23,9 @@ console.log("fuckfuckfuckfu")
 
 
 app.get('/anon-id', (req, res) => {
-  var anon = JSON.parse(fs.readFileSync('./userdata.json').toString())
-  console.log(anon)
-  res.status(200).send("hi")
+  var anon = JSON.parse(fs.readFileSync('../userdata.json').toString())
+  console.log(anon.anonID)
+  res.status(200).send(anon.anonID)
 })
 
 app.post('/send-verification-email', (req, res) => {

@@ -52,7 +52,6 @@ const anonID = async () => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: {}
   })
   console.log(response.status, await response.text())
 }
