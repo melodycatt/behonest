@@ -24,7 +24,7 @@ console.log("fuckfuckfuckfu")
 
 app.get('/anon-id', (req, res) => {
   console.log("e")
-  var anon = JSON.parse(fs.readFileSync('../userdata.json').toString())
+  var anon = JSON.parse(fs.readFileSync('./userdata.json').toString())
   console.log(anon.anonID)
   res.status(200).send(anon.anonID)
 })
@@ -34,7 +34,7 @@ app.post('/send-verification-email', (req, res) => {
   const { email } = req.body;
   const verificationCode = generateVerificationCode();
 
-  var codes = JSON.parse(fs.readFileSync('../codes.json').toString())
+  var codes = JSON.parse(fs.readFileSync('./codes.json').toString())
   codes[email] = verificationCode
   // Save the verification code and email in your database here
   fs.writeFileSync('../codes.json', JSON.stringify(codes))
