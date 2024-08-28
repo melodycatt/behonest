@@ -24,7 +24,7 @@ console.log("fuckfuckfuckfu")
 
 app.get('/anon-id', (req, res) => {
   console.log("e")
-  var anon = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'userdata.json')).toString())
+  var anon = JSON.parse(fs.readFileSync(path.join(__dirname, 'userdata.json')).toString())
   console.log(anon.anonID)
   res.status(200).send(anon.anonID)
 })
@@ -34,7 +34,7 @@ app.post('/send-verification-email', (req, res) => {
   const { email } = req.body;
   const verificationCode = generateVerificationCode();
   console.log(email, verificationCode)
-  var codes = fs.readFileSync(path.join(__dirname, '..', 'codes.json'));
+  var codes = fs.readFileSync(path.join(__dirname, 'codes.json'));
   console.log(codes)
   codes = codes.toString()
   console.log(codes)
@@ -43,10 +43,10 @@ app.post('/send-verification-email', (req, res) => {
   console.log(codes[email])
   codes[email] = verificationCode
   console.log(JSON.stringify(codes))
-  console.log(path.join(__dirname, '..', 'codes.json'))
+  console.log(path.join(__dirname, 'codes.json'))
 
   // Save the verification code and email in your database here
-  fs.writeFileSync(path.join(__dirname, '..', 'codes.json'), JSON.stringify(codes))
+  fs.writeFileSync(path.join(__dirname, 'codes.json'), JSON.stringify(codes))
   console.log("meow")
 
   sendVerificationEmail(email, verificationCode);
