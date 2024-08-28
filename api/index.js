@@ -42,7 +42,9 @@ app.post('/send-verification-email', (req, res) => {
   console.log(codes)
   console.log(codes[email])
   codes[email] = verificationCode
-  console.log(codes)
+  console.log(JSON.stringify(codes))
+  console.log(path.join(__dirname, '..', 'codes.json'))
+
   // Save the verification code and email in your database here
   fs.writeFileSync(path.join(__dirname, '..', 'codes.json'), JSON.stringify(codes))
   console.log("meow")
