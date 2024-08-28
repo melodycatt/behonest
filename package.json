@@ -1,0 +1,29 @@
+{
+  "name": "behonest",
+  "version": "1.0.0",
+  "description": "be honest.",
+  "main": "api/email.js",
+  "scripts": {
+    "test": "/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melodycatt/behonest.git"
+  },
+  "keywords": [
+    "a"
+  ],
+  "author": "melodycat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melodycatt/behonest/issues"
+  },
+  "homepage": "https://github.com/melodycatt/behonest#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "nodemailer": "^6.9.14",
+    "path": "^0.12.7"
+  }
+}

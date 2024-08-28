@@ -1,26 +1,26 @@
 const express = require('express');
 const app = express();
-const fs = require('node:fs')
+const fs = require('fs')
 const path = require('path')
 const cors = require('cors')
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 app.use(cors())
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname,'..', 'public')));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'verify.html'));
+  res.sendFile(path.join(__dirname, '..', 'public', 'verify.html'));
 });
 
 app.post('/send-verification-email', (req, res) => {
   const { email } = req.body;
   const verificationCode = generateVerificationCode();
 
-  var codes = JSON.parse(fs.readFileSync('./codes.json').toString())
+  var codes = JSON.parse(fs.readFileSync('../codes.json').toString())
   codes[email] = verificationCode
   // Save the verification code and email in your database here
-  fs.writeFileSync('./codes.json', JSON.stringify(codes))
+  fs.writeFileSync('../codes.json', JSON.stringify(codes))
 
   sendVerificationEmail(email, verificationCode);
   res.status(200).send('Verification email sent');
@@ -28,7 +28,7 @@ app.post('/send-verification-email', (req, res) => {
 
 app.post('/verify', (req, res) => {
   const {email, code, name} = req.body
-  var codes = JSON.parse(fs.readFileSync('./codes.json').toString())
+  var codes = JSON.parse(fs.readFileSync('../codes.json').toString())
   if (codes[email] == code) {
 
     var user = {}
