@@ -24,7 +24,7 @@ console.log("fuckfuckfuckfu")
 
 app.get('/anon-id', (req, res) => {
   console.log("e")
-  var anon = JSON.parse(fs.readFileSync('./userdata.json').toString())
+  var anon = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'userdata.json')).toString())
   console.log(anon.anonID)
   res.status(200).send(anon.anonID)
 })
@@ -41,16 +41,18 @@ app.post('/send-verification-email', (req, res) => {
   codes = JSON.parse(codes)
   console.log(codes)
   codes[email] = verificationCode
+  console.log(codes)
   // Save the verification code and email in your database here
   fs.writeFileSync(path.join(__dirname, '..', 'codes.json'), JSON.stringify(codes))
 
   sendVerificationEmail(email, verificationCode);
+  console.log("meow")
   res.status(200).send('Verification email sent');
 });
 
 app.post('/verify', (req, res) => {
   const {email, code, name} = req.body
-  var codes = JSON.parse(fs.readFileSync('../codes.json').toString())
+  var codes = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'codes.json')).toString())
   if (codes[email] == code) {
 
     var user = {}
