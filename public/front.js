@@ -3,7 +3,7 @@ const sendEmail = async () => {
     //const email = "edward.lenzner@gmail.com"
     console.log({ email: email })
 
-    const response = await fetch('/send-verification-email', {
+    const response = await fetch('/api/send-verification-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ const verify = async () => {
     const code = document.getElementById('verifycode').value;
     console.log("AHAHHHHH")
 
-    const response = await fetch('/verify', {
+    const response = await fetch('/api/verify', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -45,3 +45,13 @@ const verify = async () => {
     }
 }
 //verify()
+
+const anonID = async () => {
+  const response = await fetch('/api/anon-id', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+  console.log(response.status, await response.text())
+}

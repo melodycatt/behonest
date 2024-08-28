@@ -13,6 +13,12 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'verify.html'));
 });
 
+app.get('/anon-id', (req, res) => {
+  var anon = JSON.parse(fs.readFileSync('./userdata.json').toString()).anonID
+  console.log(anon)
+  res.status(200).send(anon)
+})
+
 app.post('/send-verification-email', (req, res) => {
   const { email } = req.body;
   const verificationCode = generateVerificationCode();

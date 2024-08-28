@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                background-color: black;
+            }
+
+            .page {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: none;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            #lclick {
+                animation: 0.3s linear 1.7s appear forwards;
+                opacity: 0;
+                width: 30px;
+                justify-self: baseline;
+                position:absolute;
+                margin-top: 85vh;
+            }
+
+            .title {
+                color: white;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .title.main {
+                font-size: 100px;
+            }
+
+            .title.sub {
+                font-size: 60px;
+            }
+
+            .title.p {
+                font-size: 30px;
+                max-width: 400px;
+            }
+            .title > .small {
+                font-size: 20px;
+                color:lightgray;
+            }
+
+            .hover-info {
+                display: none;
+                position: absolute;
+                margin-bottom: 20px;
+                background-color: rgb(10, 10, 10);
+                border: 2px solid white;
+                color: white;
+                font-size: 18px;
+                padding: 10px;
+                max-width: 200px;
+                text-align: left;
+                border-radius: 0 10px 10px 10px;
+            }
+
+            .hover-info.small {
+                padding: 7px;
+                font-size: 15px;
+                color: lightgray;
+                border-color: lightgray;
+                border-radius: 0px 7px 7px 7px;
+            }
+            
+            .hover-text {
+                color: rgb(255, 235, 253);
+                text-decoration: underline dotted;
+                display: inline-block;
+            }
+
+            .hover-text:hover > .hover-info {
+                display: block;
+            }
+            .hover-text:hover {
+                color: rgb(255, 225, 253);
+            }
+
+            .column-divider {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .column-divider > .column {
+                width: 50%;
+            }
+
+            input[type="radio"] {
+                height: 0.8em;
+                margin: 0px 3px 0px 3px
+            }
+            input[type="checkbox"] {
+                height: 0.8em;
+            }
+
+            .signbutton {
+                padding: 15px;
+                color: white;
+                font-size: 30px;
+                font-weight: bold;
+                background-color: rgb(255, 135, 243);
+                margin: 25px;
+                border: 2px outset rgb(255, 135, 243);
+            }
+
+            @keyframes appear {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section id="1" class="page">
+            <!--[if lt IE 7]>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+            <h1 class="title main">Be Honest.</h1>
+            <img src="public/img/lclicknbwide.svg" id="lclick">
+        </section>
+
+        <section id="2" class="page">
+            <h1 class="title p">This is a survey I made for fun because I wanted to get a general feel for where our year stands.</h1>
+        </section>
+
+        <section id="3" class="page">
+            <h1 class="title p">This has some personal questions.<br>
+                <span class="small">(political opinions, identity, social opinions)</span><br>
+                <br>
+                No question is mandatory, however I encourage you to answer every question.<br>
+                <br>
+                You can remain anonymous if you wish, though I encourage you not to, as that makes the results less interesting.
+            </h1>
+        </section>
+
+        <section id="4" class="page">
+            <h1 class="title sub">Onto the instructions.</h1>
+            <h1 class="title p">Some phrases in the questions are <div class="hover-text">underlined<div class="hover-info">...and you will see what I define the term as. This is to avoid confusion.</div></div>, meaning you can hover over them.</h1>
+        </section>
+
+        <section id="5" class="page">
+            <h1 class="title p">
+                These are basic telegraphs, but a lot of people dont know them!
+                <div class="column-divider">
+                    <div class="column title">
+                        <input type="radio" name="radio-buttons" id="rb_1"><label for="rb_1" class="small">I am a <div class="hover-text">radio button<div class="hover-info small">select one option</div></div></label>
+                        <input type="radio" name="radio-buttons" id="rb_2"><label for="rb_2" class="small">I am a <div class="hover-text">radio button<div class="hover-info small">select one option</div></div></label>
+                        <input type="radio" name="radio-buttons" id="rb_3"><label for="rb_3" class="small">I am a <div class="hover-text">radio button<div class="hover-info small">select one option</div></div></label>
+                        <input type="radio" name="radio-buttons" id="rb_4"><label for="rb_4" class="small">I am a <div class="hover-text">radio button<div class="hover-info small">select one option</div></div></label>
+                        <input type="radio" name="radio-buttons" id="rb_5"><label for="rb_5" class="small">I am a <div class="hover-text">radio button<div class="hover-info small">select one option</div></div></label>
+                    </div>
+                    <div class="column title">
+                        <input type="checkbox" name="checkbox-buttons" id="cb_1"><label for="cb_1" class="small">I am a <div class="hover-text">checkbox<div class="hover-info small">select all that apply</div></div></label><br>
+                        <input type="checkbox" name="checkbox-buttons" id="cb_2"><label for="cb_2" class="small">I am a <div class="hover-text">checkbox<div class="hover-info small">select all that apply</div></div></label><br>
+                        <input type="checkbox" name="checkbox-buttons" id="cb_3"><label for="cb_3" class="small">I am a <div class="hover-text">checkbox<div class="hover-info small">select all that apply</div></div></label><br>
+                        <input type="checkbox" name="checkbox-buttons" id="cb_4"><label for="cb_4" class="small">I am a <div class="hover-text">checkbox<div class="hover-info small">select all that apply</div></div></label><br>
+                        <input type="checkbox" name="checkbox-buttons" id="cb_5"><label for="cb_5" class="small">I am a <div class="hover-text">checkbox<div class="hover-info small">select all that apply</div></div></label><br>
+                    </div>
+                </div>
+            </h1>
+        </section>
+
+        <section id="6" class="page">
+            <button class="signbutton" id="anon">I want to be anonymous</button>
+            <button class="signbutton" id="info">I'm happy to put my info in</button>
+        </section>
+
+        <script async defer>
+
+            
+
+            var page = 1;
+            clicknext = true;
+            [...document.getElementsByClassName("column")].forEach((x) => {
+                x.addEventListener("click", (e) => {
+                    clicknext = false;
+                })
+            })
+            document.body.addEventListener("click", (e) => {
+                if (!clicknext) {
+                    clicknext = true;
+                    return;
+                }
+                page++;
+                showPage(page, page - 1)
+            })
+            function showPage(p, op) {
+                document.getElementById(op.toString()).style.display = "none"
+                document.getElementById(p.toString()).style.display = "flex"
+            }
+            showPage(1, 1)
+        </script>
+    </body>
+</html>
