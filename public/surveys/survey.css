@@ -1,0 +1,127 @@
+input[type="range"] {
+    width: 400px;
+    border-radius: 15px;
+    height: 10px;
+    background-color: white;
+    border: 5px solid black;
+    outline: 2px solid white;
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 5px;
+    height: 15px;    
+    background: white;
+    color: white;
+    outline: 3.5px solid black;
+    border-radius: 10px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: initial;
+    height: initial;
+    background: white;
+    width: 5px;
+    height: 15px;    
+    color: white;
+    outline: 3.5px solid black;
+    border-radius: 10px;
+}
+
+#content {
+    justify-content:flex-start;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    height: auto;
+}
+
+ol {
+    color: white;
+    }
+
+li {
+    justify-content: center;
+    vertical-align: middle;
+}
+
+li::marker {
+    color: white;
+    font-size: 30;
+    vertical-align: middle;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.question > label {
+    margin-bottom: 10px;
+}
+
+.title.little {
+    max-width: 700px;
+}
+
+.radiolabel {
+    font-size: 20px;
+    color: rgb(234, 215, 233);
+}
+
+input[type="radio"] {
+    appearance: none;
+    border: none;
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    background-color: white;
+}
+input[type="checkbox"] {
+    appearance: none;
+    border: none;
+    width: 1em;
+    height: 1em;
+    border-radius: 0em;
+    margin: 0;
+    margin-right: 0.5em;
+    background-color: white;
+}
+
+input[type="radio"]:checked {
+    appearance:initial;
+    background-color: rgb(255, 185, 251);
+}
+
+.checkbox > input[type="checkbox"]:checked + span::before {
+    content: '\2713';
+    display: block;
+    text-align: center;
+    color: #000;
+    position: absolute;
+    left: 0.075rem;
+    top: 0.75rem;
+    font-size: 13px;
+}
+input[type="checkbox"]:checked {
+    background-color: rgb(255, 185, 251);
+}
+
+.checkbox {
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+}
+
+.checkbox > span {
+    padding: 0.5rem 0.25rem;
+}
+
+.question > div {
+    text-align: left;
+}

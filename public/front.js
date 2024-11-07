@@ -12,8 +12,7 @@ const sendEmail = async () => {
     });
   
     if (response.ok) {
-      document.getElementById("verifycode").style.display = "block"
-      document.getElementById("verifycodeLabel").style.display = "block"
+      document.getElementById("afterVerify").style.display = "block"
       console.log('Verification email sent');
     } else {
       console.error('Error sending verification email');
@@ -23,11 +22,12 @@ const sendEmail = async () => {
   //sendEmail()
 
 const verify = async () => {
-    const email = document.getElementById('email').value;
-    const code = document.getElementById('verifycode').value;
+  const email = document.getElementById('email').value;
+  const name = document.getElementById('name').value;
+  const code = document.getElementById('verifycode').value;
     console.log("AHAHHHHH")
 
-    const response = await fetch('/api/verify', {
+    const response = await fetch('/verify', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,23 +35,19 @@ const verify = async () => {
         body: JSON.stringify({ email, code }),
     });
     console.log(response.status, await response.text())
-    if (response.ok) {
-      document.getElementById("success").style.display = "block"
-      document.getElementById("error").style.display = "none"
-    } else {
+    if (!response.ok) {
       document.getElementById("error").style.display = "block"
       document.getElementById("success").style.display = "none"
-
+      return
     }
-}
-//verify()
-
-const anonID = async () => {
-  const response = await fetch('/anon-id', {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
-  console.log(response.status, await response.text())
+    const response2 = await fetch('/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, name, anonID: localStorage.getItem('anonID') }),
+    });
+    data = await response2.text();
+    localStorage.setItem('token', token)
+    window.location.href = "categories.html"
 }

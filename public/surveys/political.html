@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html style="background-color: rgb(15, 24, 40);">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="category" content="political">
+        <title>Be Honest | Political Survey</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../main.css">
+        <link rel="stylesheet" href="survey.css">
+    </head>
+    <body style="background-color: rgb(15, 24, 40);">
+        <section id="content">
+            <h1 class="title sub">Political Questions<br><span class="title small">(generally, sliders have the first extreme mentioned in the question on the left and the second one on the right, or not at all on the left and very on the right)</span></h1>
+            <div class="question title little">
+                <label for="leftright">1. Where do believe you stand on a range from economically 
+                    <div class="hover-text">left<div class="hover-info small">Commonly, this means you believe things like the government should have responsibility and control over the economy, and the wealthy should be taxed more. This is, of course, on the left side of the slider.</div></div>
+                    to
+                    <div class="hover-text">right<div class="hover-info small">Commonly, this means you believe in things like government budget cuts, less business regulations, and tax cuts for the rich. This is, of course, on the right side of the slider.</div></div>?
+                </label>
+                <input type="range" name="leftright" id="leftright">
+            </div>
+            <div class="question title little">
+                <label for="libauth">2. Where do believe you stand on a range from 
+                    <div class="hover-text">libertarian<div class="hover-info small">At its extreme, this means you believe in complete freedom over yourself from the government, equality in law, and you oppose authority and state power.</div></div>
+                    to
+                    <div class="hover-text">authoritarian<div class="hover-info small">At its extreme, this means you believe the government should the complete power to exercise control of individual choice and freedom towards whoever they like.</div></div>?
+                </label>
+                <input type="range" name="libauth" id="libauth">
+            </div>
+            <div class="question title little">
+                <label for="progcon">3. How happy are you with the 
+                    <div class="hover-text">current state of society<div class="hover-info small">In terms of equality, human rights, quality of living, etc. In other words, how progressive are you?</div></div>?
+                </label>
+                <input type="range" name="progcon" id="progcon">
+            </div>
+            <div class="question title little">
+                <label for="abortion">4. What is your opinion on abortion?</label>
+                <div>
+                    <input type="radio" name="abortion" id="prolife">
+                    <label for="prolife" class="radiolabel">Pro-life</label>
+                    <input type="radio" name="abortion" id="prochoice">
+                    <label for="prochoice" class="radiolabel">Pro-choice</label>
+                </div>
+            </div>
+            <div class="question title little">
+                <label for="gays">5. How much do you support the 
+                    <div class="hover-text">queer community<div class="hover-info small">Any person who is not exclusively attracted to the opposite of their gender.</div></div> (excluding transgender people)?
+                </label>
+                <input type="range" name="gays" id="gays">
+            </div>
+            <div class="question title little">
+                <label for="trans">6. How much do you support the 
+                    <div class="hover-text">transgender community<div class="hover-info small">Any person who does not conform with their biological sex.</div></div>?
+                </label>
+                <input type="range" name="trans" id="trans">
+            </div>
+            <div class="question title little">
+                <label for="guns">7. How strict should gun restrictions be?</label>
+                <input type="range" name="guns" id="guns">
+            </div>
+            <div class="question title little">
+                <label for="ispal">8. Where do you stand in support of israel or palestine?</label>
+                <input type="range" name="ispal" id="ispal">
+            </div>
+            <div class="question title little">
+                <label for="bottomsurgery">9. Do you believe
+                    <div class="hover-text">bottom surgery<div class="hover-info small">A kind of gender affirming surgery to change one's genitals.</div></div>
+                    should be legal?
+                </label>
+                <div>
+                    <input type="radio" name="bottomsurgery" id="yesbs">
+                    <label for="yesbs" class="radiolabel">Yes</label>
+                    <input type="radio" name="bottomsurgery" id="nobs">
+                    <label for="nobs" class="radiolabel">No</label>
+                </div>
+            </div>
+            <div class="question title little">
+                <label for="capi">10. How much do you believe capitalism is sustainable and effective?</label>
+                <input type="range" name="capi" id="capi">
+            </div>
+            <div class="question title little">
+                <label for="wealthcap">11. Do you believe there should be a
+                    <div class="hover-text">wealth cap<div class="hover-info small">A threshold where wealth is heavily or completely taxed and used for social purposes, usually somewhere around $1b.</div></div>?
+                </label>
+                <div>
+                    <input type="radio" name="wealthcap" id="yeswc">
+                    <label for="yeswc" class="radiolabel">Yes</label>
+                    <input type="radio" name="wealthcap" id="nowc">
+                    <label for="nowc" class="radiolabel">No</label>
+                </div>
+            </div>
+            <div class="question title little">
+                <label for="tpsport">12. Should transgender competitors be able to compete in sports?</label>
+                <div>
+                    <input type="radio" name="tpsport" id="yestps">
+                    <label for="yestps" class="radiolabel">Yes</label>
+                    <input type="radio" name="tpsport" id="notps">
+                    <label for="notps" class="radiolabel">No</label>
+                </div>
+            </div>
+            <div class="question title little">
+                <label for="tpsport">12. Do you believe a corporation's priorities should be for the shareholders or the customers?</label>
+                <div>
+                    <input type="radio" name="tpsport" id="yestps">
+                    <label for="yestps" class="radiolabel">Yes</label>
+                    <input type="radio" name="tpsport" id="notps">
+                    <label for="notps" class="radiolabel">No</label>
+                </div>
+            </div>
+        </section>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <script src="" async defer></script>
+    </body>
+</html>

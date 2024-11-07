@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html style="background-color: rgb(15, 24, 40);">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="category" content="political">
+        <title>Be Honest | Political Survey</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../main.css">
+        <link rel="stylesheet" href="survey.css">
+    </head>
+    <body style="background-color: rgb(15, 24, 40);">
+        <section id="content">
+            <h1 class="title sub">Personal Questions<br><span class="title small">(generally, sliders have the first extreme mentioned in the question on the left and the second one on the right, or not at all on the left and very on the right)</span></h1>
+            <div class="question title little">
+                <label for="job">1. Do you know what job/career you want to pursue?</label>
+                <div>
+                    <input type="radio" name="job" id="jobyes">
+                    <label for="jobyes" class="radiolabel">Yes</label>
+                    <input type="radio" name="job" id="jobno">
+                    <label for="jobno" class="radiolabel">No</label>
+                </div>
+            </div>
+            <div class="question title little">
+                <label for="masc">2. How much do you think expectations of masculinity have affected how you think and behave?</label>
+                <input type="range" name="masc" id="masc">
+            </div>
+            <div class="question title little">
+                <label for="peerp">3. How much do you think peer pressure affects your behaviour?</label>
+                <input type="range" name="peerp" id="peerp">
+            </div>
+            <div class="question title little">
+                <label for="addict">4. Do you think you are or may be addicted to anything?</label>
+                <div>
+                    <label for="phone" class="radiolabel checkbox">
+                        <input type="checkbox" name="addict" id="phone">
+                        <span>Phone</span>
+                    </label><br>
+                    <label for="socmed" class="radiolabel checkbox">
+                        <input type="checkbox" name="addict" id="socmed">
+                        <span>Social Media</span>
+                    </label><br>
+                    <label for="gaming" class="radiolabel checkbox">
+                        <input type="checkbox" name="addict" id="gaming">
+                        <span>Gaming</span>
+                    </label><br>
+                    <label for="vaping" class="radiolabel checkbox">
+                        <input type="checkbox" name="addict" id="vaping">
+                        <span>Vaping</span>
+                    </label><br>
+                    <label for="porn" class="radiolabel checkbox">
+                        <input type="checkbox" name="addict" id="porn">
+                        <span>Pornography</span>
+                    </label><br>
+                    <label for="other" class="radiolabel checkbox">
+                        <input type="checkbox" name="addict" id="other">
+                        <span>Other</span>
+                    </label><br>
+                </div>
+            </div>
+            <div class="question title little">
+                <label for="code">5. How well do you understand coding?</label>
+                <input type="range" name="code" id="code">
+            </div>
+            <div class="question title little">
+                <label for="comp">6. How much do you think you understand about how your computer works?</label>
+                <input type="range" name="comp" id="comp">
+            </div>
+            <div class="question title little">
+                <label for="bestsub">7. What do you think is your
+                    <div class="hover-text">best subject<div class="hover-info small">In terms of how well you do in it.</div></div>
+                    at Rozelle?
+                </label>
+                <div>
+                    <input type="radio" name="bestsub" id="humstor">
+                    <label for="humstor" class="radiolabel">Human Stories</label><br>
+                    <input type="radio" name="bestsub" id="wau">
+                    <label for="wau" class="radiolabel">World Around Us</label><br>
+                    <input type="radio" name="bestsub" id="maths">
+                    <label for="maths" class="radiolabel">Maths</label><br>
+                    <input type="radio" name="bestsub" id="magis">
+                    <label for="magis" class="radiolabel">Magis</label><br>
+                    <input type="radio" name="bestsub" id="cia">
+                    <label for="cia" class="radiolabel">CIA</label><br>
+                    <input type="radio" name="bestsub" id="languages">
+                    <label for="languages" class="radiolabel">Languages</label><br>
+                </div>
+            </div>
+            <div class="question title little">
+                <label for="favsub">8. What do you think is your
+                    <div class="hover-text">favourite subject<div class="hover-info small">In terms of how much you enjoy it.</div></div>
+                    at Rozelle?
+                </label>
+                <div>
+                    <input type="radio" name="favsub" id="fshumstor">
+                    <label for="fshumstor" class="radiolabel">Human Stories</label><br>
+                    <input type="radio" name="favsub" id="fswau">
+                    <label for="fswau" class="radiolabel">World Around Us</label><br>
+                    <input type="radio" name="favsub" id="fsmaths">
+                    <label for="fsmaths" class="radiolabel">Maths</label><br>
+                    <input type="radio" name="favsub" id="fsmagis">
+                    <label for="fsmagis" class="radiolabel">Magis</label><br>
+                    <input type="radio" name="favsub" id="fscia">
+                    <label for="fscia" class="radiolabel">CIA</label><br>
+                    <input type="radio" name="favsub" id="fslanguages">
+                    <label for="fslanguages" class="radiolabel">Languages</label><br>
+                </div>
+            </div>
+            <div class="question title little">
+                <label for="instrument">9. Do you play any instruments?</label>
+                <div>
+                    <label for="ins1" class="radiolabel checkbox">
+                        <input type="checkbox" name="instrument" id="ins1">
+                        <span>First </span>
+                        <select id="ins1drop" name="instrument">
+                            <option value="trumpet">Trumpet</option>
+                            <option value="asax">Alto Saxophone</option>
+                            <option value="tsax">Tenor Saxophone</option>
+                            <option value="bsax">Baritone Saxophone</option>
+                            <option value="trombone">Trombone</option>
+                            <option value="tuba">Tuba</option>  
+                            <option value="euph">Euphonium</option>
+                            <option value="bassoon">Bassoon</option>
+                            <option value="clarinet">Clarinet</option>
+                            <option value="bclari">Bass Clarinet</option>  
+                            <option value="oboe">Oboe</option>
+                            <option value="flute">Flute</option>
+                            <option value="eguitar">Electric Guitar</option>
+                            <option value="aguitar">Acoustic Guitar</option>  
+                            <option value="bass">Bass (double or electric)</option>  
+                            <option value="mperc">Mallet Percussion</option>  
+                            <option value="drums">Drums</option>  
+                            <option value="timpani">Timpani</option> 
+                            <option value="mperc">Percussion</option>   
+                            <option value="piano">Piano</option>  
+                            <option value="violin">Violin</option>  
+                            <option value="viola">Viola</option>  
+                            <option value="cello">Cello</option>  
+                            <option value="fhorn">French Horn</option>
+                        </select>
+                    </label><br>
+                    <label for="ins2" class="radiolabel checkbox">
+                        <input type="checkbox" name="instrument" id="ins2">
+                        <span>Second </span>
+                        <select id="ins2drop" name="instrument">
+                            <option value="trumpet">Trumpet</option>
+                            <option value="asax">Alto Saxophone</option>
+                            <option value="tsax">Tenor Saxophone</option>
+                            <option value="bsax">Baritone Saxophone</option>
+                            <option value="trombone">Trombone</option>
+                            <option value="tuba">Tuba</option>  
+                            <option value="euph">Euphonium</option>
+                            <option value="bassoon">Bassoon</option>
+                            <option value="clarinet">Clarinet</option>
+                            <option value="bclari">Bass Clarinet</option>  
+                            <option value="oboe">Oboe</option>
+                            <option value="flute">Flute</option>
+                            <option value="eguitar">Electric Guitar</option>
+                            <option value="aguitar">Acoustic Guitar</option>  
+                            <option value="bass">Bass (double or electric)</option>  
+                            <option value="mperc">Mallet Percussion</option>  
+                            <option value="drums">Drums</option>  
+                            <option value="timpani">Timpani</option> 
+                            <option value="mperc">Percussion</option>   
+                            <option value="piano">Piano</option>  
+                            <option value="violin">Violin</option>  
+                            <option value="viola">Viola</option>  
+                            <option value="cello">Cello</option>  
+                            <option value="fhorn">French Horn</option>
+                        </select>
+                    </label><br>
+                    <label for="ins3" class="radiolabel checkbox">
+                        <input type="checkbox" name="instrument" id="ins3">
+                        <span>Third </span>
+                        <select id="ins3drop" name="instrument">
+                            <option value="trumpet">Trumpet</option>
+                            <option value="asax">Alto Saxophone</option>
+                            <option value="tsax">Tenor Saxophone</option>
+                            <option value="bsax">Baritone Saxophone</option>
+                            <option value="trombone">Trombone</option>
+                            <option value="tuba">Tuba</option>  
+                            <option value="euph">Euphonium</option>
+                            <option value="bassoon">Bassoon</option>
+                            <option value="clarinet">Clarinet</option>
+                            <option value="bclari">Bass Clarinet</option>  
+                            <option value="oboe">Oboe</option>
+                            <option value="flute">Flute</option>
+                            <option value="eguitar">Electric Guitar</option>
+                            <option value="aguitar">Acoustic Guitar</option>  
+                            <option value="bass">Bass (double or electric)</option>  
+                            <option value="mperc">Mallet Percussion</option>  
+                            <option value="drums">Drums</option>  
+                            <option value="timpani">Timpani</option> 
+                            <option value="mperc">Percussion</option>   
+                            <option value="piano">Piano</option>  
+                            <option value="violin">Violin</option>  
+                            <option value="viola">Viola</option>  
+                            <option value="cello">Cello</option>  
+                            <option value="fhorn">French Horn</option>
+                        </select>
+                    </label><br>
+                    <label for="ins4" class="radiolabel checkbox">
+                        <input type="checkbox" name="instrument" id="ins4">
+                        <span>4 or more</span>
+                    </label>
+                </div>
+            </div>
+            <div class="question title little">
+                <label for="capi">10. How much do you believe capitalism is sustainable and effective?</label>
+                <input type="range" name="capi" id="capi">
+            </div>
+            <div class="question title little">
+                <label for="wealthcap">11. Do you believe there should be a
+                    <div class="hover-text">wealth cap<div class="hover-info small">A threshold where wealth is heavily or completely taxed and used for social purposes, usually somewhere around $1b.</div></div>?
+                </label>
+                <div>
+                    <input type="radio" name="wealthcap" id="yeswc">
+                    <label for="yeswc" class="radiolabel">Yes</label>
+                    <input type="radio" name="wealthcap" id="nowc">
+                    <label for="nowc" class="radiolabel">No</label>
+                </div>
+            </div>
+            <div class="question title little">
+                <label for="tpsport">12. Should transgender competitors be able to compete in sports?</label>
+                <div>
+                    <input type="radio" name="tpsport" id="yestps">
+                    <label for="yestps" class="radiolabel">Yes</label>
+                    <input type="radio" name="tpsport" id="notps">
+                    <label for="notps" class="radiolabel">No</label>
+                </div>
+            </div>
+            <div class="question title little">
+                <label for="tpsport">12. Do you believe a corporation's priorities should be for the shareholders or the customers?</label>
+                <div>
+                    <input type="radio" name="tpsport" id="yestps">
+                    <label for="yestps" class="radiolabel">Yes</label>
+                    <input type="radio" name="tpsport" id="notps">
+                    <label for="notps" class="radiolabel">No</label>
+                </div>
+            </div>
+        </section>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <script src="" async defer></script>
+    </body>
+</html>

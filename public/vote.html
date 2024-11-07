@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html style="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="category" content="political">
+        <title>Be Honest | Political Survey</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+        <script src="vote.js" defer></script>
+    </head>
+    <body>
+        <section id="buttons">
+            <a href="/cheaters"><button id="CHEATERS">☹</button></a>
+        </section>
+        <section id="content">
+            <div class="title main" id="rozellevote">The Rozelle Vote</div>
+            <section id="qc">
+                <div class="title sub">Today's question is...</div>
+                <div class="title sub" id="question">...</div>
+                <div class="question title little" id="options">
+                    <button class="option" onclick="vote(0)"><div class="opcontent" id="o1">...</div></button>
+                    <button class="option" onclick="vote(1)"><div class="opcontent" id="o2">...</div></button>
+                </div>
+                <div id="results">
+                    <div id="votes"></div>
+                    <div id="count"><div id="count1">73</div><div id="total">100</div><div id="count2">27</div></div>
+                </div>
+            </section>
+        </section>
+        <!--[if lt IE 7]>
+        rgb(255, 192, 250) rgb(192, 255, 195)
+rgb(15, 24, 40)
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    </body>
+</html>
