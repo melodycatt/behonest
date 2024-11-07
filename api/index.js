@@ -77,46 +77,46 @@ app.post('/survey/dataanon', (req, res) => {
 }) 
 
 app.get('/api/question', (req, res) => {
-  var question = JSON.parse(fs.readFileSync(path.join(__dirname, 'question.json')).toString())
+  var question = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'public', 'question.json')).toString())
   res.status(200).send(question)
 })
 app.post('/api/vote', (req, res) => {
   const { vote } = req.body;
-  var question = JSON.parse(fs.readFileSync(path.join(__dirname, 'question.json')).toString())
+  var question = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'public', 'question.json')).toString())
   question.votes.split -= vote - 1;
   question.votes.total += 1;
   console.log(question)
-  fs.writeFileSync(path.join(__dirname, 'question.json'), JSON.stringify(question));
+  fs.writeFileSync(path.join(__dirname, '..', 'public',  'question.json'), JSON.stringify(question));
   res.status(200).send(`${question.votes.split}`);
 })
 app.post('/api/CHEATER', (req, res) => {
   const { vote, firstname, lastname } = req.body;
-  var question = JSON.parse(fs.readFileSync(path.join(__dirname, 'question.json')).toString())
+  var question = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'public', 'question.json')).toString())
   var cheaters = fs.readFileSync(path.join(__dirname, 'cheaters.txt')).toString()
   console.log(question.options, question.options[vote * 1], vote)
   cheaters += `NAME: ${firstname} ${lastname} | QUESTION: ${question.question} | VOTE: ${question.options[vote * 1]}\n`
-  fs.writeFileSync(path.join(__dirname, 'cheaters.txt'), cheaters);
+  fs.writeFileSync(path.join(__dirname, '..', 'public', 'cheaters.txt'), cheaters);
   res.status(200).send(`${question.votes.split}`);
 })
 app.post('/api/register', (req, res) => {
   const { firstname, lastname } = req.body;
-  var users = JSON.parse(fs.readFileSync(path.join(__dirname, 'userdata.json')).toString());
+  var users = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'public', 'userdata.json')).toString());
   if (users.includes([firstname, lastname])) {
     res.status(400).send("alreadyregistwersdd");
     return;
   }
   users.push([firstname, lastname]);
-  fs.writeFileSync(path.join(__dirname, 'userdata.json'), JSON.stringify(users));
+  fs.writeFileSync(path.join(__dirname, '..', 'public', 'userdata.json'), JSON.stringify(users));
   res.status(200).send();
 })
 
 app.get('/anon-id', (req, res) => {
   console.log("e")
-  var anon = JSON.parse(fs.readFileSync(path.join(__dirname, 'userdata.json')).toString())
+  var anon = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'public', 'userdata.json')).toString())
   console.log(anon.anonID)
   res.status(200).send({id: anon.anonID})
   anon.anonID += 1;
-  fs.writeFileSync(path.join(__dirname, 'userdata.json'), JSON.stringify(anon))
+  fs.writeFileSync(path.join(__dirname, '..', 'public', 'userdata.json'), JSON.stringify(anon))
 })
 
 app.post('/send-verification-email', (req, res) => {
